@@ -19,8 +19,8 @@ services:
     ports:
       - "1338:1338"
     volumes:
-      - ./store-flag/challenge/src/flag.txt:/flag.txt
-      - ./store-flag/challenge/src/ChristmasStore:/challengeStore/ChristmasStore
+      - ./christmas-store/challenge/src/flag.txt:/flag.txt
+      - ./christmas-store/challenge/src/ChristmasStore:/challengeStore/ChristmasStore
     restart: always
 
   ret2win:
