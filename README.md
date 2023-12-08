@@ -1,5 +1,7 @@
 # CTF VKU Internal 2023
 
+# ![Banner][Banner]
+
 <div align="center">
 
 This repository contains official **source code** and **writeups** for the majority of challenges in VKU Internal CTF Contest 2023.
@@ -26,7 +28,7 @@ This repository contains official **source code** and **writeups** for the major
 | [Find me](Forensics/find_me/)                                 | mrb1n            | Easy (1)   | 0      |
 | [OSINT](Forensics/osint/)                                     | mrb1n            | Normal (2) | 0      |
 
-## PWN
+## Binary Exploitation
 
 | Name                                                       | Author           | Difficulty | Solves |
 | ---------------------------------------------------------- | ---------------- | ---------- | ------ |
@@ -60,4 +62,6 @@ This repository contains official **source code** and **writeups** for the major
 This is the first time we have organized and written CTF challenges ourselves. If there are any mistakes, please forgive them.
 
 In the challenges, we use a number of place names and names of individual organizations to serve the competition. If there is anything that affects your individual or organization, please email us (<vkuctf@gmail.com>). Thank you!
-We would also like to thank those who tested the problem for us 🥰
+Thank you to everyone who wrote the challenge. And we would also like to thank those who checked the challenges for us 🥰
+
+[Banner]: https://files.catbox.moe/vw1zzo.png
