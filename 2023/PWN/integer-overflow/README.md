@@ -1,10 +1,1 @@
-# Overload PWN
-
-[Source code](./src/overload.c)
-
-## Build
-
-```bash
-docker build -t overload-pwn:lastest . 
-docker run -p <port>:1337 <image id>
-```
+# I participated in a game of entering lucky numbers to receive Christmas gifts. I tried many times but still didn't win. I thought there had to be a way to receive the gift. Please help me, I will be very grateful to you 🎰🎰

@@ -3,44 +3,44 @@ version: '3'
 services:
   bof-begin:
     build:
-      context: ./bof-begin
+      context: ./bof-begin/challenge
       dockerfile: Dockerfile
     ports:
       - "1337:1337"
     volumes:
-      - ./bof-begin/src/flag.txt:/flag.txt
-      - ./bof-begin/src/bofbegin:/bof/bofbegin
+      - ./bof-begin/challenge/src/flag.txt:/flag.txt
+      - ./bof-begin/challenge/src/bofbegin:/bof/bofbegin
     restart: always
     
   store-flag:
     build:
-      context: ./store-flag
+      context: ./store-flag/challenge
       dockerfile: Dockerfile
     ports:
       - "1338:1338"
     volumes:
-      - ./store-flag/src/flag.txt:/store/flag.txt
-      - ./store-flag/src/store:/store/store
+      - ./store-flag/challenge/src/flag.txt:/flag.txt
+      - ./store-flag/challenge/src/ChristmasStore:/challengeStore/ChristmasStore
     restart: always
 
   ret2win:
     build:
-      context: ./ret2win
+      context: ./ret2win/challenge
       dockerfile: Dockerfile
     ports:
       - "1339:1339"
     volumes:
-      - ./ret2win/src/flag.txt:/ret2win/flag.txt
-      - ./ret2win/src/ret2win:/ret2win/ret2win
+      - ./ret2win/challenge/src/flag.txt:/flag.txt
+      - ./ret2win/challenge/src/ret2win:/ret2win/ret2win
     restart: always
   
   integer-overflow:
     build:
-      context: ./integer-overflow
+      context: ./integer-overflow/challenge
       dockerfile: Dockerfile
     ports:
       - "1340:1340"
     volumes:
-      - ./integer-overflow/src/flag.txt:/inter/flag.txt
-      - ./integer-overflow/src/overload:/inter/overload
+      - ./integer-overflow/challenge/src/flag.txt:/integer/flag.txt
+      - ./integer-overflow/challenge/src/overload:/integer/overload
     restart: always
