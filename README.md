@@ -1,2 +1,3 @@
 # CTF-VKU-Internal
-VKU CTF Challenge for internal
+
+CTF contest source code for internal VKU students periodically
