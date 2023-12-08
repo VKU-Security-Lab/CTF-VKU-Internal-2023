@@ -1,0 +1,27 @@
+version: "3.6"
+services:
+    mysql_sql_level3:
+        build: ./db
+        command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8 --collation-server=utf8_unicode_ci
+        restart: unless-stopped
+        expose:
+            - 3306
+        environment:
+            - MYSQL_ROOT_PASSWORD=vku_root_password_not_hacking_@not_es4y_k4k4@_9898_NOTNULL
+            - MYSQL_DATABASE=sql_level3
+            - MYSQL_USER=vku
+            - MYSQL_PASSWORD=vku_root_password_not_hacking_@not_es4y_k4k4@_9898_NOTNULL
+
+    sql-level3:
+        build: ./
+        restart: unless-stopped
+        ports:
+            - 8083:80
+        volumes:
+            - ./src:/var/www/html
+        environment:
+            - MYSQL_HOSTNAME=mysql_sql_level3
+            - MYSQL_ROOT_PASSWORD=vku_root_password_not_hacking_@not_es4y_k4k4@_9898_NOTNULL
+            - MYSQL_DATABASE=sql_level3
+            - MYSQL_USER=vku
+            - MYSQL_PASSWORD=vku_root_password_not_hacking_@not_es4y_k4k4@_9898_NOTNULL

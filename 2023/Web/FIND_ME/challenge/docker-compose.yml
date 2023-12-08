@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  findme:
+    container_name: findme
+    build: 
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./src:/var/www/html/
+    ports:
+      - 8084:80
