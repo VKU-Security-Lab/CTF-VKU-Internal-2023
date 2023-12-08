@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  challenge-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1338:1338"
+    volumes:
+      - ./src/flag.txt:/store/flag.txt
+      - ./src/store:/store/store
+    restart: always

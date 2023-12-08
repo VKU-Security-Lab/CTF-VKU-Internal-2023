@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  challenge-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1337:1337"
+    volumes:
+      - ./src/flag.txt:/flag.txt
+      - ./src/bofbegin:/bof/bofbegin
+    restart: always

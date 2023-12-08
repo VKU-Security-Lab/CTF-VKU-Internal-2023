@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  challenge-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1339:1339"
+    volumes:
+      - ./src/flag.txt:/flag.txt
+      - ./src/ret2win:/challenge/ret2win
+    restart: always
