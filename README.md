@@ -23,7 +23,6 @@ This repository contains official **source code** and **writeups** for the major
 
 </div>
 
-
 ## Cryptography
 
 | Name                                                       | Author           | Difficulty | Solves |

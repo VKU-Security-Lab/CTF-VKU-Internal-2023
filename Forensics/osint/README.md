@@ -5,3 +5,5 @@
 ## Flag will look like: VKU{name of the company she works for in lower case}
 
 ## Example: VKU{google}
+
+`First Blood: CyberAid`
