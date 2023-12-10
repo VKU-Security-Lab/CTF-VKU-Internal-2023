@@ -10,8 +10,8 @@ This repository contains official **source code** and **writeups** for the major
 
 <div align="left">
 
-## 👑 SCOREBOARD 👑
-
+## 👑 SCOREBOARD TOP 10 HACKER👑
+![top10](image/top10.jpg)
 ![Alt text](image/scoreboard.jpg)
 
 - 👑 Champion: **vovanbao.1808**
