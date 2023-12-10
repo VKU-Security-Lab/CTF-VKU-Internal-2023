@@ -10,7 +10,7 @@ This repository contains official **source code** and **writeups** for the major
 
 <div align="left">
 
-## 👑 SCOREBOARD 👑
+## 👑 SCOREBOARD TOP 10👑
 
 ![Alt text](image/scoreboard.jpg)
 
