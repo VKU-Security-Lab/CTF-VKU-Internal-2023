@@ -1,7 +1,7 @@
-version: '3'
+version: '3.6'
 
 services:
-  challenge-service:
+  christmas-store:
     build:
       context: .
       dockerfile: Dockerfile

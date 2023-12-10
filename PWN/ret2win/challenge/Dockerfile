@@ -6,15 +6,14 @@ RUN apt-get update && \
     apt-get install -y libc6-i386 && \
     rm -rf /var/lib/apt/lists/*
 
-WORKDIR /ret2win
+WORKDIR /challenge
 
 COPY ./src/flag.txt /
-COPY ./src/ret2win /ret2win/
+COPY ./src/ret2win /challenge
 COPY run.sh /
 
-RUN chown -R root:root /ret2win && \
-    chmod 500 /run.sh
+RUN chmod 500 /run.sh
 
 EXPOSE 1339
 
-ENTRYPOINT ["/run.sh"]
+ENTRYPOINT ["/bin/bash", "/run.sh"]

@@ -5,7 +5,7 @@ void hacked()
 {
     printf("You win! Here is your flag\n");
     fflush(stdout);
-    system("/usr/bin/cat /flag.txt");
+    system("/usr/bin/cat flag.txt");
 }
 
 void hello()
