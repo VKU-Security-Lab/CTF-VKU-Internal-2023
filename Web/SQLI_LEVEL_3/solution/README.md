@@ -5,10 +5,12 @@
 ![Alt text](image.png)
 
 Khi kiểm tra thì chỉ có tính năng DELETE sẽ dính lỗi SQLi.
-Dùng payload `' or 1=1 -- ` để kiểm tra. Nhập giá trị này vào username cần xóa.
-Sau khi Remove User bằng Username trên thì toàn bộ user đều bị xóa.
+Dùng payload `' or 1=1 -- ` để kiểm tra. Nhập giá trị này vào **username** cần xóa.
+Sau khi Remove User bằng **Username** trên thì toàn bộ user đều bị xóa.
 ![Alt text](image-1.png)
 Từ đây, có thể tận dụng lỗ hổng này để tìm ra tên các bảng và các cột có trong Cơ sở dữ liệu.
+
+Đây chúng ta phải sử dụng một phương pháp tấn công gọi là lỗ hổng SQL Injection Blind.
 
 Mình đã viết một payload để giải bài này.
 (Bạn cũng có thể tìm thấy payload này được public trên github thông qua gợi ý trên file **github.html**)
