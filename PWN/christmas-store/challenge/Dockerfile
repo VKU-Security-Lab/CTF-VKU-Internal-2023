@@ -1,19 +1,15 @@
-FROM ubuntu:20.04
+FROM ubuntu:latest
 
-RUN apt-get update && \
-    apt-get install -y socat && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install socat libc6-i386 libc6 -y && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /challengeStore
+WORKDIR /hacker
 
-COPY ./src/flag.txt /
-COPY ./src/ChristmasStore /challengeStore
-COPY ./run.sh /run.sh
+COPY src/ChristmasStore /hacker/ChristmasStore
+COPY src/flag.txt /flag.txt
+COPY entry.sh /entry.sh
 
-RUN chown -R root:root /challengeStore && \
-    chmod 777 /run.sh
+RUN chmod +x ChristmasStore
+RUN chmod 444 /flag.txt
+RUN chmod +x /entry.sh
 
-EXPOSE 1338
-
-ENTRYPOINT ["/run.sh"]
+CMD ["/entry.sh"]

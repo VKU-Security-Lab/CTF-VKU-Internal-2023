@@ -1,20 +1,15 @@
 FROM ubuntu:latest
 
-RUN apt-get update && \
-    apt-get install -y socat && \
-    apt-get clean && \
-    apt-get install -y libc6-i386 && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install socat libc6-i386 libc6 -y && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /bof
 
-COPY ./src/flag.txt /
-COPY ./src/bofbegin /bof/
-COPY run.sh /
+COPY src/bofbegin /bof/bofbegin
+COPY src/flag.txt /flag.txt
+COPY entry.sh /entry.sh
 
-RUN chown -R root:root /bof && \
-    chmod 500 /run.sh
+RUN chmod +x bofbegin
+RUN chmod 444 /flag.txt
+RUN chmod +x /entry.sh
 
-EXPOSE 1337
-
-ENTRYPOINT ["/run.sh"]
+CMD ["/entry.sh"]

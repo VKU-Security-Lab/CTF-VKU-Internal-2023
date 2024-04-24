@@ -6,7 +6,7 @@ services:
       context: ./bof-begin/challenge
       dockerfile: Dockerfile
     ports:
-      - "1337:1337"
+      - "10001:1337"
     volumes:
       - ./bof-begin/challenge/src/flag.txt:/flag.txt
       - ./bof-begin/challenge/src/bofbegin:/bof/bofbegin

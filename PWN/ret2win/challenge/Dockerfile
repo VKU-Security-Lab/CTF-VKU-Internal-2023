@@ -1,19 +1,15 @@
 FROM ubuntu:latest
 
-RUN apt-get update && \
-    apt-get install -y socat && \
-    apt-get clean && \
-    apt-get install -y libc6-i386 && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install socat libc6-i386 libc6 -y && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /challenge
+WORKDIR /ret2win
 
-COPY ./src/flag.txt /
-COPY ./src/ret2win /challenge
-COPY run.sh /
+COPY /src/ret2win .
+COPY /src/flag.txt /
+COPY entry.sh /
 
-RUN chmod 500 /run.sh
+RUN chmod 444 /flag.txt
+RUN chmod +x /entry.sh
+RUN chmod +x /ret2win/ret2win
 
-EXPOSE 1339
-
-ENTRYPOINT ["/bin/bash", "/run.sh"]
+CMD ["/entry.sh"]

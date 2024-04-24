@@ -1,13 +1,10 @@
-version: '3.6'
+version: '3'
 
 services:
-  christmas-store:
+  beef-stack:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "1338:1338"
-    volumes:
-      - ./src/flag.txt:/challengeStore/flag.txt
-      - ./src/ChristmasStore:/challengeStore/ChristmasStore
+      - "10037:1337"
     restart: always

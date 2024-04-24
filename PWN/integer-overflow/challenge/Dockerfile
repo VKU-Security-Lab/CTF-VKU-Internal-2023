@@ -1,19 +1,15 @@
 FROM ubuntu:latest
 
-RUN apt-get update && \
-    apt-get install -y socat && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install socat libc6-i386 libc6 -y && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /integer
+WORKDIR /overload
 
-COPY ./src/flag.txt /integer/
-COPY ./src/overload /integer/
-COPY ./run.sh /run.sh
+COPY src/overload /overload/overload
+COPY src/flag.txt /flag.txt
+COPY entry.sh /entry.sh
 
-RUN chown -R root:root /integer && \
-    chmod 500 /run.sh
+RUN chmod +x overload
+RUN chmod 444 /flag.txt
+RUN chmod +x /entry.sh
 
-EXPOSE 1340
-
-ENTRYPOINT ["/run.sh"]
+CMD ["/entry.sh"]

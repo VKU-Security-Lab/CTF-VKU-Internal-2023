@@ -1,10 +1,10 @@
 version: '3'
 
 services:
-  challenge-service:
+  p4r4mmmm:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "1339:1339"
+      - "10002:1337"
     restart: always

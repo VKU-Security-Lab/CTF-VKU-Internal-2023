@@ -1,13 +1,10 @@
 version: '3'
 
 services:
-  challenge-service:
+  beef-stack:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "1337:1337"
-    volumes:
-      - ./src/flag.txt:/flag.txt
-      - ./src/bofbegin:/bof/bofbegin
+      - "10001:1337"
     restart: always
