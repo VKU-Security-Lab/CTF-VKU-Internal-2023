@@ -7,20 +7,22 @@ services:
       dockerfile: Dockerfile
     ports:
       - "10001:1337"
-    volumes:
-      - ./bof-begin/challenge/src/flag.txt:/flag.txt
-      - ./bof-begin/challenge/src/bofbegin:/bof/bofbegin
     restart: always
     
   store-flag:
     build:
-      context: ./store-flag/challenge
+      context: ./christmas-store/challenge
       dockerfile: Dockerfile
     ports:
-      - "1338:1338"
-    volumes:
-      - ./christmas-store/challenge/src/flag.txt:/flag.txt
-      - ./christmas-store/challenge/src/ChristmasStore:/challengeStore/ChristmasStore
+      - "10002:1337"
+    restart: always
+
+  integer-overflow:
+    build:
+      context: ./integer-overflow/challenge
+      dockerfile: Dockerfile
+    ports:
+      - "10004:1337"
     restart: always
 
   ret2win:
@@ -28,19 +30,6 @@ services:
       context: ./ret2win/challenge
       dockerfile: Dockerfile
     ports:
-      - "1339:1339"
-    volumes:
-      - ./ret2win/challenge/src/flag.txt:/flag.txt
-      - ./ret2win/challenge/src/ret2win:/ret2win/ret2win
+      - "10003:1337"
     restart: always
   
-  integer-overflow:
-    build:
-      context: ./integer-overflow/challenge
-      dockerfile: Dockerfile
-    ports:
-      - "1340:1340"
-    volumes:
-      - ./integer-overflow/challenge/src/flag.txt:/integer/flag.txt
-      - ./integer-overflow/challenge/src/overload:/integer/overload
-    restart: always

@@ -6,10 +6,10 @@ WORKDIR /overload
 
 COPY src/overload /overload/overload
 COPY src/flag.txt /flag.txt
-COPY entry.sh /entry.sh
+COPY run.sh /run.sh
 
 RUN chmod +x overload
 RUN chmod 444 /flag.txt
-RUN chmod +x /entry.sh
+RUN chmod +x /run.sh
 
-CMD ["/entry.sh"]
+CMD ["/run.sh"]
